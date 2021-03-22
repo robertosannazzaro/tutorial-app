@@ -16,6 +16,6 @@ app.get("*", (req: any, res: any) => {
   res.sendFile(join(__dirname, "../../app/public", "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`${APP_TITLE}'s server listening at http://localhost:${PORT}`);
 });
